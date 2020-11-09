@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto Mono', monospace;
+}
+
+//MEDIA QUERY MANAGER
+/*
+0-600PX :  PHONES
+600PX-900PX:  TABLET PORTRAIT
+900PX-1200PX: TABLET LANDSCAPE
+1200PX-1800PX : IS WHERE ARE NORMAL STYLES APPLY
+1800PX: FOR BIG SCREENS
+*/
+
+html{
+  font-size: 62.5%;
+}
+@media(max-width: 1200px){
+  html{
+    font-size: 56.25%;
+  }
+}
+@media(max-width: 900px){
+  html{
+    font-size: 50%;
+  }
+}
+@media(min-width: 1800px){
+  html{
+    font-size: 75%;
+  }
+}
+
+$Primary-color:#61C1EB;
+$Secondary-color: #2C406C;
+$white: #FFFFFF;
+$light-black: #2D362B;

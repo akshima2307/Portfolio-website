@@ -1,0 +1,78 @@
+//Intro section
+
+.intro{
+  background-color: $Secondary-color;
+  height: 100vh;
+  &__container{
+    position: relative;
+    background-color: $Primary-color;
+    height: 100%;
+  }
+  &__img{
+    & > .span1{
+      font-size: 4rem;
+      font-weight: 700;
+      position: absolute;
+      top: 24%;
+      left: 25%;
+      color: $white;
+    }
+    & > .span2{
+      font-size: 4rem;
+      font-weight: 700;
+      position: absolute;
+      top: 24%;
+      right: 25%;
+      color: $white;
+    }
+    & > img {
+      position: absolute;
+      left: 50%;
+      top: 12%;
+      transform: translateX(-50%);
+      width: 20rem;
+      height: 20rem;
+      border: 15px solid $white;
+      box-sizing: border-box;
+      border-radius: 12.4rem;
+
+    }
+  }
+
+  &__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+    text-align: center;
+    & > h2{
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+    & > h3{
+      font-size: 3.6rem;
+      line-height: 4.2rem;
+      margin-bottom: 1.6rem;
+      & > span{
+        color: $Secondary-color;
+      }
+    }
+  }
+
+  &__icons{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    & > figure{
+      &:not(:last-child){
+        margin-right: 3rem;
+      }
+    }
+  }
+  &__icon{
+    width: 5rem;
+  }
+}

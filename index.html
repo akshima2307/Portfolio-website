@@ -1,18 +1,212 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Akshima Sharma</title>
-  </head>
-  <body>
-    <section class="intro">
-      <video class="intro__video" autoplay loop >
-        <source src="asset/Video.mp4" type="video/mp4">
-      </video>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <title>Akshima Sharma</title>
+</head>
+
+<body>
+
+  <!--
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
+    <div class="navigation__background">
+      &nbsp;
+    </div>
+  -->
+    
+
+
+  <section class="intro">
+    <section class="intro__container">
+      <div class="intro__img">
+        <span class="span1">
+          <>
+        </span>
+        <img src="asset/header_img.png" alt="header_img">
+        <span class="span2">
+          < />
+        </span>
+      </div>
       <div class="intro__content">
-        <h1>Hello,I'm <span>Akshima Sharma</span>.</h1>
-        <h2>I'm a Front-end web developer</h2>
+        <h3>Hello, I am <span>Akshima Sharma</span>.</h3>
+        <h2>I am a Front-end web developer.</h2>
+      </div>
+      <div class="intro__icons">
+        <figure><img class="intro__icon" src="asset/github.svg"></figure>
+        <figure><img class="intro__icon" src="asset/linkedin.svg"></figure>
       </div>
     </section>
-  </body>
+  </section>
+
+  
+  <div id="navbar" class="navigation__list">
+    <a class="navigation__link" href="#about" class="border">ABOUT</a>
+    <a class="navigation__link" href="#project">PROJECTS</a>
+    <a class="navigation__link" href="#contact">CONTACT</a>
+  </div>
+
+  <section id="about" class="about">
+    <div class="about__heading">
+      <h1>ABOUT ME</h1>
+    </div>
+
+    <div class="about__container">
+      <div class="about__content">
+        <p>
+          Hello guys,<br>
+          I am a <span>Front-end web developer.</span><br>
+          I am really passionate about creating dynamic user-interface from sratch.
+          Let’s make something special.
+        </p>
+      </div>
+      <div class="about__skills">
+        <div class="about__skills__container">
+          <span>Html</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>UI-Designing</span>
+        </div>
+        <div class="about__skills__container">
+          <div>
+            <div class="html">&nbsp;</div>
+          </div>
+          <div>
+            <div class="css">&nbsp;</div>
+          </div>
+          <div>
+            <div class="javaScript">&nbsp;</div>
+          </div>
+          <div>
+            <div class="react">&nbsp;</div>
+          </div>
+          <div>
+            <div class="ui">&nbsp;</div>
+          </div>
+        </div>
+        <div class="about__skills__container">
+          <span>80%</span>
+          <span>80%</span>
+          <span>65%</span>
+          <span>65%</span>
+          <span>50%</span>
+        </div>
+      </div>
+    </div>
+    <div class="about__container">
+      <div class="about__property">
+        <img src="asset/screen.png" alt="Responsive">
+        <h2>Responsive</h2>
+        <p>My layouts will work on any device, big or small.</p>
+      </div>
+      <div class="about__property">
+        <img src="asset/dynamic.png" alt="Dynamic">
+        <h2>Dynamic</h2>
+        <p>Websites don't have to be static, I love making pages come to life.</p>
+      </div>
+      <div class="about__property">
+        <img src="asset/speed.png" alt="Efficient">
+        <h2>Efficient</h2>
+        <p>Fast load times and lag free interaction, my highest priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="projects">
+    <div class="projects__heading">
+      <h1>PROJECTS</h1>
+    </div>
+    <div class="projects__categories">
+      <button class="btn btn-all active" onclick="displayProjects('all') , toogleActiveClass('all')">All</button>
+      <button class="btn btn-htmlCss" onclick="displayProjects('htmlCss'), toogleActiveClass('htmlCss')"> HTML & CSS</button>
+      <button class=" btn btn-javaScript" onclick="displayProjects('javaScript'), toogleActiveClass('javaScript')">JavaScript</button>
+      <button class="btn btn-React" onclick="displayProjects('React'), toogleActiveClass('React')">React</button>
+    </div>
+    <div class="projects__project-section">
+      <div class="projects__container projects__container-htmlCss">
+        <a href=""><img class="projects__container-img" src="asset/Outdoors.png" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">OUTDOORS</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">HTML & CSS</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-htmlCss">
+        <a href=""><img class="projects__container-img" src="asset/food-fussion.png" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">Food fussion</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">HTML & CSS</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-htmlCss">
+        <a href=""><img class="projects__container-img" src="asset/Udemy.png" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">Udemy-landing-page</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">HTML & CSS</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-javaScript">
+        <a href=""><img class="projects__container-img" src="asset/r-p-s.jpg" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">Rock Paper scissors</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">JAVASCRIPT</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-javaScript">
+        <a href=""><img class="projects__container-img" src="asset/forkify.png" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">Forkify</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">JAVASCRIPT</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-javaScript">
+        <img class="projects__container-img" src="asset/Expense-traker.png" alt="Image">
+        <!--<h1 class="projects__container-heading">Forkify</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">JAVASCRIPT</span>
+        </h3>-->
+      </div>
+      <div class="projects__container projects__container-React">
+        <a href=""><img class="projects__container-img" src="asset/r-p-s.jpg" alt="Image"></a>
+        <!--<h1 class="projects__container-heading">Rock Paper scissors</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">React-JS</span>
+        </h3>-->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div>
+      <h1>CONTACT</h1>
+      <p>Have any question ?</p>
+      <form>
+        <input placeholder="Name" type="text" name="name" required="">
+        <input placeholder="Enter email" type="email" name="email" required="">
+        <textarea placeholder="Your Message" type="text" name="message"></textarea>
+      </form>
+      <button>SUBMIT</button>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="footer__container">
+      <figure><img class="footer__icon" src="asset/icon-email.svg"></figure>
+      <figure><img class="footer__icon" src="asset/icon-facebook.svg"></figure>
+      <figure><img class="footer__icon" src="asset/icon-instagram.svg"></figure>
+    </div>
+  </footer>
+
+
+
+  <script src="./app.js" charset="utf-8"></script>
+</body>
+
 </html>

@@ -1,0 +1,113 @@
+.about{
+  position: relative;
+
+  &__heading{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    display: block;
+    margin-top: 3rem;
+    & > h1{
+      font-size: 3rem;
+      font-weight: 900;
+      color: $Primary-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-bottom: 5px solid $Primary-color;
+    }
+  }
+  &__container{
+    padding: 7rem 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10rem;
+  }
+  &__property{
+    text-align: center;
+
+    & > img{
+      background: $Primary-color;
+      padding: 1rem;
+      border-radius: 20px;
+      filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.25));
+    }
+
+    & > h2{
+      font-size: 2rem;
+      font-weight: 900;
+      color: $light-black;
+      padding-top: 1rem;
+    }
+    & > p{
+      font-size: 1.5rem;
+      color: $light-black;
+      padding-top: 0.7rem;
+      width: 25rem;
+    }
+  }
+
+  &__content{
+    text-align: center;
+    width: 50rem;
+    & > p{
+      padding-top: 1rem;
+      font-size: 1.7rem;
+      color: $light-black;
+      & > span{
+        color: black;
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__skills{
+    display: flex;
+
+    &__container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: flex-end;
+
+      & > div{
+        width: 36rem;
+        height: 2.5rem;
+        border: 1px solid black;
+        margin-bottom: 0.7rem;
+        & > .html{
+          width: 80%;
+          height: 100%;
+          background-color: $Primary-color;
+        }
+        & > .css{
+          width: 80%;
+          height: 100%;
+          background-color: $Primary-color;
+        }
+        & > .javaScript{
+          width: 65%;
+          height: 100%;
+          background-color: $Primary-color;
+        }
+        & > .react{
+          width: 65%;
+          height: 100%;
+          background-color: $Primary-color;
+        }
+        & > .ui{
+          width: 50%;
+          height: 100%;
+          background-color: $Primary-color;
+        }
+      }
+      & > span{
+        font-size: 1.3rem;
+        margin: 0 0.4rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

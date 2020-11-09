@@ -1,0 +1,25 @@
+.footer{
+    &-section{
+        padding: 5rem 0;
+        background-color: #1b242f;
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        & > figure{
+            background: $Secondary-color;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5px;
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+    }
+    }
+    
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+    }
+
+}

@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss CSS/styles.css  -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshima2307/Portfolio-website.git"
+  },
+  "author": "Akshima Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshima2307/Portfolio-website/issues"
+  },
+  "homepage": "https://github.com/akshima2307/Portfolio-website#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
