@@ -49,3 +49,13 @@ function displayProjects(c){
 }
 
 
+
+//PopUp
+
+var popup = document.getElementById("popup");
+
+function displayPopup(id){
+  if(id === "Outdoors"){
+    
+  }
+}
