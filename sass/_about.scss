@@ -22,10 +22,31 @@
     display: flex;
     justify-content: space-between;
     margin: 0 10rem;
+    @include respond(small-desktop){
+      margin: 0 4rem;
+    }
+    &-1{
+      @include respond(tab-land){
+        padding: 3rem 0;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &-2{
+      @include respond(big-phone){
+        flex-direction: column;
+        align-items: center;
+
+        & > div:not(last-child){
+          margin-bottom: 4rem;
+        }
+      }
+    }
+
+
   }
   &__property{
     text-align: center;
-
     & > img{
       background: $Primary-color;
       padding: 1rem;
@@ -49,11 +70,17 @@
 
   &__content{
     text-align: center;
-    width: 50rem;
+    width: 45%;
+    @include respond(tab-land){
+      width: 65%;
+    }
     & > p{
       padding-top: 1rem;
       font-size: 1.7rem;
       color: $light-black;
+      @include respond(tab-land){
+        margin-bottom: 7rem;
+      }
       & > span{
         color: black;
         font-weight: 900;
@@ -63,7 +90,9 @@
 
   &__skills{
     display: flex;
-
+    @include respond(big-phone){
+      width: 100%;
+    }
     &__container{
       width: 100%;
       display: flex;
@@ -78,6 +107,9 @@
         height: 2.5rem;
         border: 1px solid black;
         margin-bottom: 0.7rem;
+        @include respond(small-phone){
+          width: 26rem;
+        }
         & > .html{
           width: 80%;
           height: 100%;
@@ -112,70 +144,8 @@
     }
   }
 }
-
-
-
-
-
-
-@media (max-width: 1250px){
-  .about__container{
-    margin: 0 6rem;
-  }
-}
-
-@media (max-width: 1050px){
-  .about__container-1{
+.about__container-2{
+  @include respond(medium-phone){
     flex-direction: column;
-    align-items: center;
-  }
-  .about__content > p {
-    margin-bottom: 7rem;
-  }
-  .about__content{
-    width: 65%;
-  }
-  .about__skills{
-    width: 80%;
   }
 }
-
-@media (max-width: 750px){
-  .about__container{
-    margin: 0 3rem;
-  }
-  .about__container-2{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .about__property{
-    &:not(:last-child){
-      margin-bottom: 6rem;
-    }
-    & > img{
-      padding: 3rem;
-    }
-
-    & > h2{
-      font-size: 3rem;
-    }
-    & > p{
-      font-size: 1.6rem;
-    }
-  }
-}
-
-@media (max-width: 625px){
-  .about__skills{
-      width: 100%;
-      &__container-2 > div{
-        width: 26rem;
-      }
-  }
-  .about__content{
-    width: 80%;
-  }
-}
-

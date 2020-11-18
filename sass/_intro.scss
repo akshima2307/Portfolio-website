@@ -37,6 +37,10 @@
       border: 15px solid $white;
       box-sizing: border-box;
       border-radius: 12.4rem;
+      @include respond(big-phone){
+        width: 25rem;
+        height: 25rem;
+      }
 
     }
   }
@@ -49,6 +53,9 @@
     transform: translateX(-50%);
     color: $white;
     text-align: center;
+    @include respond(big-phone){
+      width: 65%;
+    }
     & > h2{
       font-size: 4rem;
       line-height: 6rem;

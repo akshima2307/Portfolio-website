@@ -3,7 +3,7 @@
     padding: 7rem 0;
     height: max-content;
     background-color:#252934;
-    
+
     & > div{
         width: 60%;
         margin: 3rem auto;
@@ -33,16 +33,28 @@
                 width: 60%;
                 margin-bottom: 1.6rem;
                 border: none;
+                @include respond(big-phone){
+                  width: 80%;
+                }
+                @include respond(medium-phone){
+                  width: 100%;
+                }
             }
             & > textarea{
                 background-color: #1e242c;
                 padding: 1rem;
-                height: 8rem;
+                height: 9rem;
                 width: 60%;
                 border: none;
+                @include respond(big-phone){
+                  width: 80%;
+                }
+                @include respond(medium-phone){
+                  width: 100%;
+                }
             }
         }
-        & > button, 
+        & > button,
         & > button:active,
         & > button:focus{
                 font-size: 1.6rem;

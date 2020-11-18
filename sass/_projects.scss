@@ -1,6 +1,6 @@
 .projects{
   height: max-content;
-  padding: 7rem 0; 
+  padding: 7rem 0;
   background-color: #f5f5f5;
   &__heading{
     position: relative;
@@ -40,9 +40,17 @@
       width: 16rem;
       height: 4rem;
       color: $Primary-color;
+      font-size: 1.4rem;
       font-weight: 700;
       background-color: white;
       transition: all .2s;
+      @include respond(medium-phone){
+        &:not(:last-child){
+          margin-right: 1rem;
+        }
+        width: 12rem;
+        height: 5rem;
+      }
     }
     .active{
       color: white;
@@ -56,6 +64,22 @@
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows: repeat(3 , 1fr);
     grid-gap: 1rem;
+    @include respond(tab-land){
+      padding: 0 4rem;
+    }
+    @include respond(tab-port){
+      grid-template-columns: repeat(2 , 1fr);
+      grid-template-rows: repeat(4 , 1fr);
+    }
+    @include respond(medium-phone){
+      grid-template-columns: repeat(1 , 1fr);
+      grid-template-rows: repeat(7 , 1fr);
+      padding: 0 9rem;
+      grid-row-gap: 3rem;
+    }
+    @include respond(small-phone){
+      padding: 0 1rem;
+    }
   }
   &__container{
     display: none;
@@ -129,33 +153,6 @@
     }
     &:hover &-img{
       opacity: 0;
-    } 
-  }
-}
-
-
-@media (max-width: 1250px){
-  .projects__project-section{
-    padding: 0 10rem;
-  }
-}
-@media (max-width: 1050px){
-  .projects__project-section{
-    grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: repeat(4 , 1fr);
-  }
-}
-@media (max-width: 750px){
-  .projects__project-section{
-    padding: 0 6rem;
-  }
-  .projects__categories > .btn:not(:last-child){
-    margin-right: 2rem;
-  }
-}
-
-@media (max-width: 650px){
-  .projects__project-section{
-    grid-template-columns: repeat(1 , 1fr);
+    }
   }
 }

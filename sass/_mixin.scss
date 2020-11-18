@@ -1,0 +1,31 @@
+
+//MEDIA QUERY MANAGER
+/*
+0-600PX :  PHONES
+600PX-900PX:  TABLET PORTRAIT
+900PX-1200PX: TABLET LANDSCAPE
+1200PX-1800PX : IS WHERE ARE NORMAL STYLES APPLY
+1800PX: FOR BIG SCREENS
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 28.75em) {@content};  //460px
+    }
+    @if $breakpoint == medium-phone {
+        @media (max-width: 37.5em) {@content};  //600px
+    }
+    @if $breakpoint == big-phone {
+        @media (max-width: 46.875em) {@content}; //750px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em){@content};  //900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 65.625em) {@content};    //1050px
+    }
+    @if $breakpoint == small-desktop {
+        @media (max-width: 75em) {@content};  //1200px
+    }
+
+}
