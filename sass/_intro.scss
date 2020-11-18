@@ -5,7 +5,7 @@
   height: 100vh;
   &__container{
     position: relative;
-    background-color: $Primary-color;
+    background-color: #252934;
     height: 100%;
   }
   &__img{
@@ -14,7 +14,8 @@
       font-weight: 700;
       position: absolute;
       top: 24%;
-      left: 25%;
+      left: 10%;
+      transform: translateX(-10%);
       color: $white;
     }
     & > .span2{
@@ -22,7 +23,8 @@
       font-weight: 700;
       position: absolute;
       top: 24%;
-      right: 25%;
+      right: 10%;
+      transform: translateX(-10%);
       color: $white;
     }
     & > img {
@@ -40,6 +42,7 @@
   }
 
   &__content{
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,7 +58,7 @@
       line-height: 4.2rem;
       margin-bottom: 1.6rem;
       & > span{
-        color: $Secondary-color;
+        color: #61C1EB;
       }
     }
   }
@@ -65,7 +68,7 @@
     position: absolute;
     left: 50%;
     bottom: 10%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -10%);
     & > figure{
       &:not(:last-child){
         margin-right: 3rem;

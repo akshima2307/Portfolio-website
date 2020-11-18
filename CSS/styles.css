@@ -35,21 +35,23 @@ html {
   height: 100vh; }
   .intro__container {
     position: relative;
-    background-color: #61C1EB;
+    background-color: #252934;
     height: 100%; }
   .intro__img > .span1 {
     font-size: 4rem;
     font-weight: 700;
     position: absolute;
     top: 24%;
-    left: 25%;
+    left: 10%;
+    transform: translateX(-10%);
     color: #FFFFFF; }
   .intro__img > .span2 {
     font-size: 4rem;
     font-weight: 700;
     position: absolute;
     top: 24%;
-    right: 25%;
+    right: 10%;
+    transform: translateX(-10%);
     color: #FFFFFF; }
   .intro__img > img {
     position: absolute;
@@ -62,6 +64,7 @@ html {
     box-sizing: border-box;
     border-radius: 12.4rem; }
   .intro__content {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -76,26 +79,26 @@ html {
       line-height: 4.2rem;
       margin-bottom: 1.6rem; }
       .intro__content > h3 > span {
-        color: #2C406C; }
+        color: #61C1EB; }
   .intro__icons {
     display: flex;
     position: absolute;
     left: 50%;
     bottom: 10%;
-    transform: translateX(-50%); }
+    transform: translate(-50%, -10%); }
     .intro__icons > figure:not(:last-child) {
       margin-right: 3rem; }
   .intro__icon {
     width: 5rem; }
 
 #navbar {
-  height: 9vh;
+  height: 7vh;
   overflow: hidden;
-  background-color: #2C406C;
+  background-color: #1b242f;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 6px solid #61C1EB;
+  border-bottom: 5px solid #61C1EB;
   z-index: 100; }
 
 /* Navbar links */
@@ -104,13 +107,13 @@ html {
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 3rem; }
+  font-size: 2.4rem; }
   .navigation__link:not(:last-child) {
     padding-right: 15rem; }
 
 /* Page content */
 .content {
-  padding: 16px; }
+  padding: 14px; }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -239,13 +242,13 @@ html {
 }
 */
 .about {
-  position: relative; }
+  position: relative;
+  padding: 7rem 0; }
   .about__heading {
     position: relative;
     height: 10vh;
     width: 100%;
-    display: block;
-    margin-top: 3rem; }
+    display: block; }
     .about__heading > h1 {
       font-size: 3rem;
       font-weight: 900;
@@ -294,7 +297,9 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-content: flex-end; }
+      align-items: flex-start; }
+      .about__skills__container-3 {
+        align-items: flex-end; }
       .about__skills__container > div {
         width: 36rem;
         height: 2.5rem;
@@ -325,15 +330,55 @@ html {
         margin: 0 0.4rem;
         margin-bottom: 1.5rem; }
 
+@media (max-width: 1250px) {
+  .about__container {
+    margin: 0 6rem; } }
+
+@media (max-width: 1050px) {
+  .about__container-1 {
+    flex-direction: column;
+    align-items: center; }
+  .about__content > p {
+    margin-bottom: 7rem; }
+  .about__content {
+    width: 65%; }
+  .about__skills {
+    width: 80%; } }
+
+@media (max-width: 750px) {
+  .about__container {
+    margin: 0 3rem; }
+  .about__container-2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .about__property:not(:last-child) {
+    margin-bottom: 6rem; }
+  .about__property > img {
+    padding: 3rem; }
+  .about__property > h2 {
+    font-size: 3rem; }
+  .about__property > p {
+    font-size: 1.6rem; } }
+
+@media (max-width: 625px) {
+  .about__skills {
+    width: 100%; }
+    .about__skills__container-2 > div {
+      width: 26rem; }
+  .about__content {
+    width: 80%; } }
+
 .projects {
   height: max-content;
-  margin-bottom: 6rem; }
+  padding: 7rem 0;
+  background-color: #f5f5f5; }
   .projects__heading {
     position: relative;
     height: 10vh;
     width: 100%;
-    display: block;
-    margin-top: 3rem; }
+    display: block; }
     .projects__heading > h1 {
       font-size: 3rem;
       font-weight: 900;
@@ -434,10 +479,29 @@ html {
     .projects__container:hover .projects__container-img {
       opacity: 0; }
 
+@media (max-width: 1250px) {
+  .projects__project-section {
+    padding: 0 10rem; } }
+
+@media (max-width: 1050px) {
+  .projects__project-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr); } }
+
+@media (max-width: 750px) {
+  .projects__project-section {
+    padding: 0 6rem; }
+  .projects__categories > .btn:not(:last-child) {
+    margin-right: 2rem; } }
+
+@media (max-width: 650px) {
+  .projects__project-section {
+    grid-template-columns: repeat(1, 1fr); } }
+
 .contact-section {
-  padding: 3rem 0;
+  padding: 7rem 0;
   height: max-content;
-  background-color: #2C406C; }
+  background-color: #252934; }
   .contact-section > div {
     width: 60%;
     margin: 3rem auto;
@@ -459,26 +523,28 @@ html {
       flex-direction: column;
       align-items: center; }
       .contact-section > div > form > input {
+        background-color: #1e242c;
         padding: 1rem;
         height: 4rem;
         width: 60%;
         margin-bottom: 1.6rem;
-        border: 3px solid #61C1EB; }
+        border: none; }
       .contact-section > div > form > textarea {
+        background-color: #1e242c;
         padding: 1rem;
-        height: 7rem;
+        height: 8rem;
         width: 60%;
-        border: 3px solid #61C1EB; }
+        border: none; }
     .contact-section > div > button,
     .contact-section > div > button:active,
     .contact-section > div > button:focus {
       font-size: 1.6rem;
       margin-top: 3rem;
-      background-color: #2C406C;
+      background-color: #252934;
       color: #FFFFFF;
       width: 12rem;
       height: 4rem;
-      border: none;
+      border: 4px solid white;
       outline: none;
       border: 3px solid #FFFFFF; }
 
@@ -490,19 +556,21 @@ html {
   display: flex;
   justify-content: center; }
   .footer__container > figure {
-    background: #2C406C;
-    width: 5rem;
-    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262f38;
+    width: 6rem;
+    height: 6rem;
     border-radius: 5px; }
     .footer__container > figure:not(:last-child) {
       margin-right: 3rem; }
 
 .footer__icon {
-  width: 4rem;
-  height: 4rem; }
+  width: 3rem;
+  height: 3rem; }
 
 .popup {
-  position: relative;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -513,15 +581,16 @@ html {
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   transition: all .3s; }
-  .popup:target {
+  .popup-target {
     opacity: 1;
     visibility: visible; }
   .popup__close {
+    color: #FFFFFF;
+    margin-right: 5rem;
+    font-size: 6rem;
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    font-size: 2rem; }
+    float: right;
+    cursor: pointer; }
   .popup-content {
     padding: 1rem;
     margin: 3rem auto;
@@ -535,25 +604,41 @@ html {
     border-radius: 3px; }
     .popup-content > img {
       width: 100%;
-      height: 65%; }
+      height: 65%;
+      object-fit: cover; }
   .popup-heading {
     font-size: 3rem;
     color: #61C1EB;
     margin: 1rem; }
   .popup-para {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #3d3d3d;
     width: 75%;
     margin-bottom: 2rem; }
   .popup-icons {
     display: flex; }
     .popup-icons > a {
-      text-decoration: none; }
+      padding: 1rem;
+      text-decoration: none;
+      background: #61C1EB;
+      color: white;
+      font-size: 1.8rem;
+      width: 20rem;
+      border-radius: 5px;
+      transition: hover 0.2s; }
       .popup-icons > a:first-of-type {
         margin-right: 4rem; }
       .popup-icons > a > figure {
-        text-align: center; }
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .popup-icons > a > figure > img {
+          margin-right: 1rem; }
+        .popup-icons > a > figure > figcaption {
+          font-size: 1.9rem; }
+      .popup-icons > a:hover {
+        opacity: 0.8; }
   .popup__icon {
-    width: 4rem;
-    height: 4rem; }
+    width: 2rem;
+    height: 2rem; }

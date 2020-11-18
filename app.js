@@ -52,10 +52,61 @@ function displayProjects(c){
 
 //PopUp
 
-var popup = document.getElementById("popup");
 
-function displayPopup(id){
-  if(id === "Outdoors"){
-    
+function getPara(_id){
+  if(_id === "Outdoors"){
+    return "Outdoors it's a website, more like a landing page, for a fictional company that offers tours in the nature. This Website is modern eloquent feel ";
   }
+  if(_id === "food-fussion"){
+    return "Food Fussion is resturant Website, which servers both Indian and International dishes. This is a multiPage Website. This project have all the cool feature of CSS such as flexbox, grid, etc  ";
+  }
+  if(_id === "Udemy-landing-page"){
+    return "Udemy-landing-page is Udemy clone. This is a Practice Projects just to sharpen my skills. This is a fully Responsive site. ";
+  }
+  if(_id === "Rock-Paper-Scissors"){
+    return "In this project user play Rock, Paper, Scissors against the computer. The game is optimal for any view port width";
+  }
+  if(_id === "Forkify"){
+    return "It is a JavaScript Recipe searching app. This app works with a real API. This app deals with modern JavaScript, Asynchronous function , AJAX Calls, Fetch and much more features."
+  }
+}
+
+function getsite(_id){
+  let Id = _id.toLowerCase();
+  console.log(Id);
+}
+getsite("Outdoors");
+
+
+let popup = document.getElementById("popup");
+const renderPopup = (id) => {
+  popup.classList.add("popup-target");
+  const markup = `
+    <a onclick="popupCloase()" class="popup__close">&times;</a>
+    <div class="popup-content">
+      <img class="popup-img" src="asset/${id}.png">
+      <h1 class="popup-heading">${id}</h1>
+      <p class="popup-para">${getPara(id)}</p>
+      <div class="popup-icons">
+        <a href="https://${getsite(id)}.vercel.app/">
+          <figure>
+            <img class="popup__icon" src="asset/coding.svg">
+            <figcaption>View Code</figcaption>
+          </figure>
+        </a>
+        <a href="#">
+          <figure href="#">
+            <img class="popup__icon" src="asset/web-site.svg">
+            <figcaption>View Site</figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+  `;
+  popup.innerHTML = markup;
+}
+
+function popupCloase(){
+  console.log("hello");
+  popup.classList.remove("popup-target");
 }
