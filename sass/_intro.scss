@@ -1,13 +1,9 @@
 //Intro section
 
 .intro{
-  background-color: $Secondary-color;
   height: 100vh;
-  &__container{
-    position: relative;
-    background-color: #252934;
-    height: 100%;
-  }
+  background-color: #252934;
+  position: relative;
   &__img{
     & > .span1{
       font-size: 4rem;
@@ -16,7 +12,10 @@
       top: 24%;
       left: 10%;
       transform: translateX(-10%);
-      color: $white;
+      color: white;
+      @media (max-width: $bp-small){
+        font-size: 3rem;
+      }
     }
     & > .span2{
       font-size: 4rem;
@@ -25,7 +24,11 @@
       top: 24%;
       right: 10%;
       transform: translateX(-10%);
-      color: $white;
+      color: white;
+      @media (max-width: $bp-small){
+        font-size: 3rem;
+        right: 8%;
+      }
     }
     & > img {
       position: absolute;
@@ -34,14 +37,13 @@
       transform: translateX(-50%);
       width: 20rem;
       height: 20rem;
-      border: 15px solid $white;
+      border: 15px solid white;
       box-sizing: border-box;
       border-radius: 12.4rem;
-      @include respond(big-phone){
-        width: 25rem;
-        height: 25rem;
+      @media (max-width: $bp-small){
+        width: 17rem;
+        height: 17rem;
       }
-
     }
   }
 
@@ -51,19 +53,25 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-    color: $white;
+    color: white;
     text-align: center;
-    @include respond(big-phone){
-      width: 65%;
+    @media (max-width: $bp-medium){
+      width: 85%;
     }
     & > h2{
       font-size: 4rem;
       line-height: 6rem;
+      @media (max-width: $bp-small){
+        font-size: 3rem;
+      }
     }
     & > h3{
       font-size: 3.6rem;
       line-height: 4.2rem;
       margin-bottom: 1.6rem;
+      @media (max-width: $bp-small){
+        font-size: 3rem;
+      }
       & > span{
         color: #61C1EB;
       }
@@ -76,6 +84,9 @@
     left: 50%;
     bottom: 10%;
     transform: translate(-50%, -10%);
+    @media (max-width: $bp-small){
+      bottom: 5%;
+    }
     & > figure{
       &:not(:last-child){
         margin-right: 3rem;

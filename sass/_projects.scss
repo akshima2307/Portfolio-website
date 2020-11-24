@@ -10,12 +10,12 @@
     & > h1{
       font-size: 3rem;
       font-weight: 900;
-      color: $Primary-color;
+      color: #61C1EB;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      border-bottom: 5px solid $Primary-color;
+      border-bottom: 5px solid #61C1EB;
     }
   }
 
@@ -27,58 +27,59 @@
       &:hover{
         cursor: pointer;
         color: white;
-        background-color: $Primary-color;
+        background-color: #61C1EB;
       }
       &:focus{
         outline: none;
       }
       &:not(:last-child){
         margin-right: 4rem;
+        @media (max-width: $bp-medium){
+          margin-right: 1rem;
+        }
       }
-      border: 1px solid $Secondary-color;
+      border: 1px solid #252934;
       box-sizing: border-box;
       width: 16rem;
       height: 4rem;
-      color: $Primary-color;
+      color: #61C1EB;
       font-size: 1.4rem;
       font-weight: 700;
       background-color: white;
       transition: all .2s;
-      @include respond(medium-phone){
-        &:not(:last-child){
-          margin-right: 1rem;
-        }
-        width: 12rem;
-        height: 5rem;
+      @media (max-width: $bp-medium){
+        width: 13rem;
+      }
+      @media (max-width: $bp-small){
+        width: 10rem;
       }
     }
     .active{
       color: white;
-      background-color: $Primary-color;
+      background-color: #61C1EB;
     }
   }
 
   &__project-section{
-    padding: 0 15rem;
+    padding: 0 10rem;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows: repeat(3 , 1fr);
     grid-gap: 1rem;
-    @include respond(tab-land){
-      padding: 0 4rem;
+    @media (max-width: $bp-largest){
+      padding: 0 7rem;
     }
-    @include respond(tab-port){
+    @media (max-width: $bp-large){
       grid-template-columns: repeat(2 , 1fr);
       grid-template-rows: repeat(4 , 1fr);
     }
-    @include respond(medium-phone){
+    @media (max-width: $bp-medium){
+      padding: 0 2rem;
+    }
+    @media (max-width: $bp-small){
       grid-template-columns: repeat(1 , 1fr);
       grid-template-rows: repeat(7 , 1fr);
-      padding: 0 9rem;
-      grid-row-gap: 3rem;
-    }
-    @include respond(small-phone){
-      padding: 0 1rem;
+      grid-gap: 3rem;
     }
   }
   &__container{
@@ -117,7 +118,7 @@
     }
     &-skills{
       font-size: 2rem;
-      color: $Primary-color;
+      color: #61C1EB;
       position: absolute;
       top: 30%;
       left: 50%;
@@ -134,8 +135,8 @@
       top: 70%;
       transform: translate(-50%,20%);
       background-color: white;
-      color: $Primary-color;
-      border: 3px solid $Primary-color;
+      color: #61C1EB;
+      border: 3px solid #61C1EB;
       outline: none;
       opacity: 0;
       &:hover{
