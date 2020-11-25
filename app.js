@@ -27,7 +27,7 @@ displayProjects("all");
 
 function toogleActiveClass(c){
     var btn = document.getElementsByClassName("btn");
-    console.log(btn);
+    //console.log(btn);
     //btn[i].className.split("-")[1]
         
         for(let i = 0; i<btn.length; i++)
@@ -73,10 +73,8 @@ function getPara(_id){
 
 function getsite(_id){
   let Id = _id.toLowerCase();
-  console.log(Id);
+  //console.log(Id);
 }
-getsite("Outdoors");
-
 
 let popup = document.getElementById("popup");
 const renderPopup = (id) => {
