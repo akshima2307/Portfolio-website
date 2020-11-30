@@ -45,9 +45,9 @@
 
 
   <div id="navbar" class="navigation__list">
-    <a class="navigation__link" href="#about" class="border">ABOUT</a>
-    <a class="navigation__link" href="#project">PROJECTS</a>
-    <a class="navigation__link" href="#contact">CONTACT</a>
+    <a id="about_link" class="navigation__link" href="#about" class="border">ABOUT</a>
+    <a id="project_link" class="navigation__link" href="#project">PROJECTS</a>
+    <a id="contact_link" class="navigation__link" href="#contact">CONTACT</a>
   </div>
 
   <section id="about" class="about">
@@ -136,8 +136,6 @@
         </h3>
         <a id="Outdoors" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn More...</button></a>
       </div>
-
-
       <div class="projects__container projects__container-htmlCss">
         <img class="projects__container-img" src="asset/food-fussion.png" alt="Image">
         <h1 class="projects__container-heading">Food fussion</h1>
@@ -179,7 +177,7 @@
         <a id="Expense-Traker" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn More...</button></a>
       </div>
       <div class="projects__container projects__container-React">
-        <img class="projects__container-img" src="asset/Rock-paper-scissors.png" alt="Image">
+        <img class="projects__container-img" src="asset/Rock-paper-Scissors.png" alt="Image">
         <h1 class="projects__container-heading">Rock Paper scissors</h1>
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">React-JS</span>
@@ -204,9 +202,15 @@
 
   <footer class="footer-section">
     <div class="footer__container">
-      <figure><img class="footer__icon" src="asset/icon-email.svg"></figure>
-      <figure><img class="footer__icon" src="asset/icon-facebook.svg"></figure>
-      <figure><img class="footer__icon" src="asset/icon-instagram.svg"></figure>
+      <figure>
+        <a href="https://www.facebook.com/akshima.sharma.7771/">
+          <img class="footer__icon" src="asset/icon-facebook.svg"></figure>
+        </a>  
+      <figure>
+        <a href="https://www.instagram.com/akshima0723/">
+          <img class="footer__icon" src="asset/icon-instagram.svg">
+        </a>
+      </figure>
     </div>
   </footer>
 

@@ -5,18 +5,47 @@ window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("navbar");
+var about = document.getElementById("about");
+var project = document.getElementById("project");
+var contact = document.getElementById("contact");
+var aboutLink = document.getElementById("about_link");
+var projectLink = document.getElementById("project_link");
+var contactLink = document.getElementById("contact_link");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
+var _about = about.offsetTop;
+var _project = project.offsetTop;
+var _contact = contact.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
+    highlightNavLink();
   } else {
     navbar.classList.remove("sticky");
+    aboutLink.classList.remove("blue");
+    projectLink.classList.remove("blue");
+    contactLink.classList.remove("blue");
   }
 }
+
+function highlightNavLink(){
+  if (window.pageYOffset >= _about){
+    aboutLink.classList.add("blue");
+  }
+  if (window.pageYOffset >= _project){
+    aboutLink.classList.remove("blue");
+    projectLink.classList.add("blue");
+  }
+  if (window.pageYOffset >= _contact){
+    projectLink.classList.remove("blue");
+    contactLink.classList.add("blue");
+  }
+}
+
+
 
 
 
@@ -105,6 +134,6 @@ const renderPopup = (id) => {
 }
 
 function popupCloase(){
-  console.log("hello");
+  //console.log("hello");
   popup.classList.remove("popup-target");
 }
