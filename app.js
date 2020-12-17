@@ -100,9 +100,43 @@ function getPara(_id){
   }
 }
 
-function getsite(_id){
-  let Id = _id.toLowerCase();
-  //console.log(Id);
+function getSite(_id){
+  var prevSite = "";
+  if(_id == "Outdoors"){
+    prevSite = "https://outdoors.vercel.app";
+  }
+  if(_id === "food-fussion"){
+    prevSite = "https://food-fussion.vercel.app";
+  }
+  if(_id === "Udemy-landing-page"){
+    prevSite = "https://udemy-landing-page.vercel.app";
+  }
+  if(_id === "Rock-Paper-Scissors"){
+    prevSite = "https://rock-paper-scissors-lake.vercel.app"
+  }
+  if(_id === "Forkify"){
+    prevSite = "https://forkify-peach.vercel.app"
+  }
+  return prevSite;
+}
+function getCode(_id){
+  var code = ""
+  if(_id == "Outdoors"){
+    code = "https://github.com/akshima2307/OUTDOORS";
+  }
+  if(_id === "food-fussion"){
+    code = "https://github.com/akshima2307/FOOD-FUSSION";
+  }
+  if(_id === "Udemy-landing-page"){
+    code = "https://github.com/akshima2307/FOOD-FUSSION";
+  }
+  if(_id === "Rock-Paper-Scissors"){
+    code = "https://github.com/akshima2307/Rock-paper-scissors"
+  }
+  if(_id === "Forkify"){
+    prevSite = "https://github.com/akshima2307/Forkify"
+  }
+  return code;
 }
 
 let popup = document.getElementById("popup");
@@ -115,13 +149,13 @@ const renderPopup = (id) => {
       <h1 class="popup-heading">${id}</h1>
       <p class="popup-para">${getPara(id)}</p>
       <div class="popup-icons">
-        <a href="https://${getsite(id)}.vercel.app/">
+        <a href="${getCode(id)}">
           <figure>
             <img class="popup__icon" src="asset/coding.svg">
             <figcaption>View Code</figcaption>
           </figure>
         </a>
-        <a href="#">
+        <a href="${getSite(id)}">
           <figure href="#">
             <img class="popup__icon" src="asset/web-site.svg">
             <figcaption>View Site</figcaption>
