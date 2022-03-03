@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -24,23 +24,24 @@
   -->
 
   <section class="intro">
-      <div class="intro__img">
-        <span class="span1">
-          <>
-        </span>
-        <img src="asset/header_img.png" alt="header_img">
-        <span class="span2">
-          < />
-        </span>
-      </div>
-      <div class="intro__content">
-        <h3>Hello, I am <span>Akshima Sharma</span>.</h3>
-        <h2>I am a Front-end web developer.</h2>
-      </div>
-      <div class="intro__icons">
-        <figure><a href="https://github.com/akshima2307"><img class="intro__icon" src="asset/github.svg"></a></figure>
-        <figure><a href="https://www.linkedin.com/in/akshima-sharma-9ba6a41b1/"><img class="intro__icon" src="asset/linkedin.svg"></a></figure>
-      </div>
+    <div class="intro__img">
+      <span class="span1">
+        <>
+      </span>
+      <img src="asset/header_img.png" alt="header_img">
+      <span class="span2">
+        < />
+      </span>
+    </div>
+    <div class="intro__content">
+      <h3>Hello, I am <span>Akshima Sharma</span>.</h3>
+      <h2>I am a Front-end web developer.</h2>
+    </div>
+    <div class="intro__icons">
+      <figure><a href="https://github.com/akshima2307"><img class="intro__icon" src="asset/github.svg"></a></figure>
+      <figure><a href="https://www.linkedin.com/in/akshima-sharma-9ba6a41b1/"><img class="intro__icon"
+            src="asset/linkedin.svg"></a></figure>
+    </div>
   </section>
 
 
@@ -123,18 +124,30 @@
     </div>
     <div class="projects__categories">
       <button class="btn btn-all active" onclick="displayProjects('all') , toogleActiveClass('all')">All</button>
-      <button class="btn btn-htmlCss" onclick="displayProjects('htmlCss'), toogleActiveClass('htmlCss')"> HTML & CSS</button>
-      <button class=" btn btn-javaScript" onclick="displayProjects('javaScript'), toogleActiveClass('javaScript')">JavaScript</button>
-      <button class="btn btn-React" onclick="displayProjects('React'), toogleActiveClass('React')">React</button>
+      <button class="btn btn-htmlCss" onclick="displayProjects('htmlCss'), toogleActiveClass('htmlCss')"> HTML &
+        CSS</button>
+      <button class=" btn btn-javaScript"
+        onclick="displayProjects('javaScript'), toogleActiveClass('javaScript')">JavaScript</button>
+      <button class="btn btn-react" onclick="displayProjects('react'), toogleActiveClass('react')">React</button>
     </div>
     <div class="projects__project-section">
+      <div class="projects__container projects__container-react">
+        <img class="projects__container-img" src="asset/proshop.png" alt="Image">
+        <h1 class="projects__container-heading">Pro-shop</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">MERN Stack</span>
+        </h3>
+        <a id="proshop" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
+      </div>
       <div class="projects__container projects__container-htmlCss">
         <img class="projects__container-img" src="asset/Outdoors.png" alt="Image">
         <h1 class="projects__container-heading">OUTDOORS</h1>
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">HTML & CSS</span>
         </h3>
-        <a id="Outdoors" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn More...</button></a>
+        <a id="Outdoors" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
       </div>
       <div class="projects__container projects__container-htmlCss">
         <img class="projects__container-img" src="asset/food-fussion.png" alt="Image">
@@ -142,23 +155,35 @@
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">HTML & CSS</span>
         </h3>
-        <a id="food-fussion" id="Outdoors" onclick="renderPopup(this.id)" ><button class="projects__container-btn">Learn More...</button></a>
+        <a id="food-fussion" id="Outdoors" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
       </div>
-      <div class="projects__container projects__container-htmlCss">
+      <div class="projects__container projects__container-react">
+        <img class="projects__container-img" src="asset/magic-memory.png" alt="Image">
+        <h1 class="projects__container-heading">Magic Memory</h1>
+        <h3 class="projects__container-skills">
+          <span class="projects__container-skill">React</span>
+        </h3>
+        <a id="magic-memory" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
+      </div>
+      <!-- <div class="projects__container projects__container-htmlCss">
         <img class="projects__container-img" src="asset/Udemy-landing-page.png" alt="Image">
         <h1 class="projects__container-heading">Udemy-landing-page</h1>
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">HTML & CSS</span>
         </h3>
-        <a id="Udemy-landing-page" onclick="renderPopup(this.id)" ><button class="projects__container-btn">Learn More...</button></a>
-      </div>
+        <a id="Udemy-landing-page" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
+      </div> -->
       <div class="projects__container projects__container-javaScript">
         <img class="projects__container-img" src="asset/Rock-Paper-Scissors.png" alt="Image">
         <h1 class="projects__container-heading">Rock-Paper-Scissors</h1>
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">JAVASCRIPT</span>
         </h3>
-        <a id="Rock-Paper-Scissors" onclick="renderPopup(this.id)" ><button class="projects__container-btn">Learn More...</button></a>
+        <a id="Rock-Paper-Scissors" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
       </div>
       <div class="projects__container projects__container-javaScript">
         <img class="projects__container-img" src="asset/Forkify.png" alt="Image">
@@ -166,7 +191,8 @@
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">JAVASCRIPT</span>
         </h3>
-        <a id="Forkify" onclick="renderPopup(this.id)" ><button class="projects__container-btn">Learn More...</button></a>
+        <a id="Forkify" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
       </div>
       <div class="projects__container projects__container-javaScript">
         <img class="projects__container-img" src="asset/Expense-traker.png" alt="Image">
@@ -174,15 +200,8 @@
         <h3 class="projects__container-skills">
           <span class="projects__container-skill">JAVASCRIPT</span>
         </h3>
-        <a id="Expense-Traker" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn More...</button></a>
-      </div>
-      <div class="projects__container projects__container-React">
-        <img class="projects__container-img" src="asset/Rock-Paper-Scissors.png" alt="Image">
-        <h1 class="projects__container-heading">Rock Paper scissors</h1>
-        <h3 class="projects__container-skills">
-          <span class="projects__container-skill">React-JS</span>
-        </h3>
-        <a ><button class="projects__container-btn">Learn More...</button></a>
+        <a id="Expense-Traker" onclick="renderPopup(this.id)"><button class="projects__container-btn">Learn
+            More...</button></a>
       </div>
     </div>
   </section>
@@ -204,8 +223,9 @@
     <div class="footer__container">
       <figure>
         <a href="https://www.facebook.com/akshima.sharma.7771/">
-          <img class="footer__icon" src="asset/icon-facebook.svg"></figure>
-        </a>  
+          <img class="footer__icon" src="asset/icon-facebook.svg">
+      </figure>
+      </a>
       <figure>
         <a href="https://www.instagram.com/akshima0723/">
           <img class="footer__icon" src="asset/icon-instagram.svg">

@@ -83,6 +83,13 @@ function displayProjects(c){
 
 
 function getPara(_id){
+  
+  if(_id === "magic-memory"){
+    return "Magic-memory is a game build with React and react hooks where we have to memorize the location of similar cards with minmum checks"
+  }
+  if(_id === "proshop"){
+    return "ECommerce platform with React, Redux, Express & MongoDB. Full featured shopping cart Product reviews and ratings. Top products carousel, product pagination, product search feature User profile with many more features"
+  }
   if(_id === "Outdoors"){
     return "Outdoors it's a website, more like a landing page, for a fictional company that offers tours in the nature. This Website is modern eloquent feel ";
   }
@@ -102,6 +109,12 @@ function getPara(_id){
 
 function getSite(_id){
   var prevSite = "";
+  if(_id == "magic-memory"){
+    prevSite = "https://react-firebase-theta.vercel.app/";
+  }
+  if(_id == "proshop"){
+    prevSite = "https://proshop5423.herokuapp.com/";
+  }
   if(_id == "Outdoors"){
     prevSite = "https://outdoors.vercel.app";
   }
@@ -121,6 +134,12 @@ function getSite(_id){
 }
 function getCode(_id){
   var code = ""
+  if(_id == "magic-memory"){
+    code = "https://github.com/akshima2307/React-Firebase/tree/main/magic-memory"
+  }
+  if(_id == "proshop"){
+    code = "https://github.com/akshima2307/ProShop-MERN.git";
+  }
   if(_id == "Outdoors"){
     code = "https://github.com/akshima2307/OUTDOORS";
   }
@@ -168,6 +187,5 @@ const renderPopup = (id) => {
 }
 
 function popupCloase(){
-  //console.log("hello");
   popup.classList.remove("popup-target");
 }
