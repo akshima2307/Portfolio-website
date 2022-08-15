@@ -83,7 +83,15 @@ function displayProjects(c){
 
 
 function getPara(_id){
-  
+  if(_id === "artistry"){
+    return "Artistry is a social media platform for artist to upload their art work is the form of images/videos etc. Technology stack used is MERN stack. User can explore other user art and can show their love for other artists by reviewing them."
+  }
+  if(_id === "order-dashboard"){
+    return "Made UI for an admin dashboard where they can view all the order placed with nested dropdown for categorizing orders."
+  }
+  if(_id === "workspace-dashboard"){
+    return "Workspace is a platform where user can manage their projects, make notes and also organize their tasks. Built the UI with Html, CSS and used JavaScript for the drag and drop functionality to put the task in different catregory."
+  }
   if(_id === "magic-memory"){
     return "Magic-memory is a game build with React and react hooks where we have to memorize the location of similar cards with minmum checks"
   }
@@ -109,6 +117,15 @@ function getPara(_id){
 
 function getSite(_id){
   var prevSite = "";
+  if(_id == "artistry"){
+    return "https://artistry5423.herokuapp.com/"
+  }
+  if(_id == "order-dashboard"){
+    return "https://html-css-tasks.vercel.app/#"
+  }
+  if(_id=="workspace-dashboard"){
+    return "https://workspace-alpha.vercel.app/"
+  }
   if(_id == "magic-memory"){
     prevSite = "https://react-firebase-theta.vercel.app/";
   }
@@ -134,6 +151,15 @@ function getSite(_id){
 }
 function getCode(_id){
   var code = ""
+  if(_id =="artistry"){
+    prevSite = "https://github.com/akshima2307/Major-project"
+  }
+  if(_id == "order-dashboard"){
+    return "https://github.com/akshima2307/htmlCssTasks"
+  }
+  if(_id=="workspace-dashboard"){
+    return "https://github.com/akshima2307/Workspace"
+  }
   if(_id == "magic-memory"){
     code = "https://github.com/akshima2307/React-Firebase/tree/main/magic-memory"
   }
